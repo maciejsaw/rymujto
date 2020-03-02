@@ -64,7 +64,7 @@ var oneRhymeHeight;
 function initDynamicUrlWithRhymesId() {
   oneRhymeHeight = $('[js-rhyme-list-item]').first().innerHeight();
 
-  $(window).on('scroll', function() {
+  $(window).on('scroll.dynamicURL', function() {
     var scrollTop = $(this).scrollTop() - oneRhymeHeight/2;
     var indexOfRhyme = scrollTop / oneRhymeHeight;
     console.log(indexOfRhyme);
@@ -79,6 +79,7 @@ function initDynamicUrlWithRhymesId() {
 }
 initDynamicUrlWithRhymesId();
 $(window).on('resize', function() {
+  $(window).off('scroll.dynamicURL');
   initDynamicUrlWithRhymesId();
 });
 
