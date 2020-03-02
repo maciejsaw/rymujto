@@ -61,7 +61,6 @@ $.On('click', '[js-nav-prev]', function() {
   if (isNotEmpty(newId)) {
     StateURL.setParam('rym', newId);
   }
-
 });
 
 
