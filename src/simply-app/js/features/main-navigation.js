@@ -41,8 +41,8 @@ function initDynamicUrlWithRhymesId() {
   var len = $('[js-rhyme-list-item]').length;
 
   $(window).on('scroll', function() {
-    var scrollTop = $(this).scrollTop();
-    var indexOfRhyme = (scrollTop - oneHeight/3) / oneHeight;
+    var scrollTop = $(this).scrollTop() - oneHeight/2;
+    var indexOfRhyme = (scrollTop) / oneHeight;
     console.log(indexOfRhyme);
     if (indexOfRhyme >= 0) {
       indexOfRhyme = Math.round(indexOfRhyme);
