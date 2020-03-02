@@ -44,9 +44,11 @@ function initDynamicUrlWithRhymesId() {
     var scrollTop = $(this).scrollTop();
     console.log(scrollTop);
     var indexOfRhyme = (scrollTop - oneHeight) / oneHeight;
-    indexOfRhyme = Math.round(indexOfRhyme);
-    idOfRhyme = $('[js-rhyme-list-item]').eq(indexOfRhyme).attr('id');
-    StateURL.set('rym', idOfRhyme);
+    if (indexOfRhyme > 0) {
+      indexOfRhyme = Math.round(indexOfRhyme);
+      idOfRhyme = $('[js-rhyme-list-item]').eq(indexOfRhyme).attr('id');
+      StateURL.set('rym', idOfRhyme);
+    }
   });
 }
 initDynamicUrlWithRhymesId();
