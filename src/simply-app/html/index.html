@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<!--  This site was created in Webflow. http://www.webflow.com  -->
+<!--  Last Published: Sun Aug 26 2018 22:54:24 GMT+0000 (UTC)  -->
+<html data-wf-page="5b479ac576d89ce1bd5e4253" data-wf-site="5b42845be9023e4441f0254d">
+<head>
+  <meta charset="utf-8">
+  <title>Simply.JS</title>
+  <meta content="PSimply.JS" property="og:title">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <!-- <meta name="robots" content="noindex, nofollow" /> -->
+  <!-- <script>var PROD_ROOT_DOMAIN = 'ExampleDomain.com';</script> -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-1"></script>
+  <script>
+    //only run GA on prod environment
+    var currentDomainParts = window.location.host.split('.').reverse();
+    var currentRootDomain = currentDomainParts[1]+'.'+currentDomainParts[0];
+
+    if (currentRootDomain === PROD_ROOT_DOMAIN) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-XXXXXXXXX-1', { 'optimize_id': 'GTM-XXXXXXXXX'});
+    } else {
+      console.log('Google Analytics disabled because of dev environment');
+    }
+  </script> -->
+  <!-- end Google Analytics -->
+  <link href="css/styles-bundle.css" rel="stylesheet" type="text/css">
+  <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="images/webclip.png" rel="apple-touch-icon">
+  <style>
+    .initial-load-overlay {
+      display: block;
+    }
+
+    .initialload-overlay__logo {
+      width: 200px;
+      height: 33px;
+      margin-top: -42px;
+      margin-bottom: 27px;
+      margin-left: -85px;
+      background-position: 50% 50%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url('data:image/png;base64,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');
+    }
+
+    [animation-spin="true"] {
+      -webkit-animation-name: spin;
+      -webkit-animation-duration: 2000ms;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+      -moz-animation-name: spin;
+      -moz-animation-duration: 2000;
+      -moz-animation-iteration-count: infinite;
+      -moz-animation-timing-function: linear;
+      -ms-animation-name: spin;
+      -ms-animation-duration: 2000ms;
+      -ms-animation-iteration-count: infinite;
+      -ms-animation-timing-function: linear;
+      animation-name: spin;
+      animation-duration: 2000ms;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+  </style>
+  <!-- Facebook Pixel Code -->
+  <!-- <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '391614744929554');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=391614744929554&ev=PageView&noscript=1"
+  /></noscript> -->
+  <!-- End Facebook Pixel Code -->
+</head>
+<body>
+  <div class="initial-load-overlay">
+    <div class="initial-load-overlay__spinner">
+      <div class="initialload-overlay__logo"></div>
+      <div animation-spin="true" class="bem-spinner"></div>
+    </div>
+  </div>
+  <div js-selector="sidebar-overlay" action-hide-hamburger-menu="true" class="sidebar-overlay is-transparent is-hidden"></div>
+  <div js-selector="sidebar" will-change="transform" class="sidebar">
+    <div class="sidebar-inner">
+      <div class="sidebar-header w-clearfix">
+        <a href="https://www.Simply.pl" class="sidebar-header__logo w-inline-block">
+          <div class="sidebar-rn-logo">
+            <div class="sidebar-rn-logo__icon"></div>
+            <div class="sidebar-rn-logo__text">Simply</div>
+          </div>
+        </a>
+      </div>
+      <div class="sidebar-nav">
+        <div class="sidebar-nav__list">
+          <a href="https://www.Simply.pl" class="sidebar-nav-item w-inline-block">
+            <div class="sidebar-nav-item__icon"></div>
+            <div class="sidebar-nav-item__text">Start</div>
+          </a>
+          <a href="#" class="sidebar-nav-item w-inline-block w--current">
+            <div class="sidebar-nav-item__icon"></div>
+            <div class="sidebar-nav-item__text">Porównywarki</div>
+          </a>
+          <a href="https://www.Simply.pl/o-nas" class="sidebar-nav-item w-inline-block">
+            <div class="sidebar-nav-item__icon"></div>
+            <div class="sidebar-nav-item__text">O nas</div>
+          </a>
+          <a href="https://www.Simply.pl/wiedza-i-pomoc" class="sidebar-nav-item w-inline-block">
+            <div class="sidebar-nav-item__icon"></div>
+            <div class="sidebar-nav-item__text">Wiedza i pomoc</div>
+          </a>
+          <a href="https://www.Simply.pl/kontakt" class="sidebar-nav-item w-inline-block">
+            <div class="sidebar-nav-item__icon"></div>
+            <div class="sidebar-nav-item__text">Kontakt</div>
+          </a>
+        </div>
+      </div>
+      <div class="sidebar-footer"></div>
+    </div>
+  </div>
+  <div webkit-overflow-scrolling="touch" js-selector="body-wrapper" class="body-wrapper is-light-gray">
+    <div class="page-wrapper" js-page-wrapper>
+      <div class="top-header" js-top-header>
+        <div class="top-header__inner w-clearfix">
+          <div class="top-header__left-side">
+            <a href="https://www.Simply.pl" class="top-header__logo w-inline-block">
+              <div class="rn-logo">
+                <div class="rn-logo__icon"></div>
+                <div class="rn-logo__text">Simply</div>
+              </div>
+            </a>
+          </div>
+          <div class="top-header__right-side">
+            <div class="top-header__nav-wrapper w-clearfix">
+              <a href="https://www.Simply.pl" class="top-header__nav-link-holder w-inline-block">
+                <div class="top-header__nav-link">
+                  <div class="top-header__nav-link-text">Start</div>
+                </div>
+              </a>
+              <a href="#" class="top-header__nav-link-holder w-inline-block">
+                <div class="top-header__nav-link is-current">
+                  <div class="top-header__nav-link-text">Porównywarki</div>
+                </div>
+              </a>
+              <a href="https://www.Simply.pl/o-nas" class="top-header__nav-link-holder w-inline-block">
+                <div class="top-header__nav-link">
+                  <div class="top-header__nav-link-text">O nas</div>
+                </div>
+              </a>
+              <a href="https://www.Simply.pl/wiedza-i-porady-lista" class="top-header__nav-link-holder w-inline-block">
+                <div class="top-header__nav-link">
+                  <div class="top-header__nav-link-text">Wiedza i pomoc</div>
+                </div>
+              </a>
+              <a href="https://www.Simply.pl/kontakt" class="top-header__nav-link-holder w-inline-block">
+                <div class="top-header__nav-link">
+                  <div class="top-header__nav-link-text">Kontakt</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div action-show-hamburger-menu="true" class="hamburger-icon">
+          <div class="hamburger-icon__line"></div>
+          <div class="hamburger-icon__line"></div>
+          <div class="hamburger-icon__line"></div>
+        </div>
+      </div>
+      <div subpage-id="home" class="subpage">
+        Hello world!
+      </div>
+      <div class="footer">
+        <div class="footer__inner w-clearfix">
+          <div class="footer__left-side">
+            <a href="https://www.Simply.pl/kontakt" class="footer__link-block w-inline-block">
+              <div class="footer__link-text">Kontakt</div>
+            </a>
+            <a href="https://www.Simply.pl/regulaminy-i-dokumenty" class="footer__link-block w-inline-block">
+              <div class="footer__link-text">Regulaminy i dokumenty</div>
+            </a>
+          </div>
+          <div class="footer__right-side">
+            <div class="footer__copyright">©2018 Simply</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div webkit-overflow-scrolling="touch" class="modal-wrapper is-hidden" modal-wrapper>
+    <div class="modal-wrapper__inner">
+      <div modal-id="deal-details" class="modal-holder is-hidden">
+        <div class="modal-window">
+          <div class="modal-window__content is-wider">
+            <div class="modal-window__header">
+              <div class="modal-window__title">
+                <div class="modal-window__title-text">Example</div>
+              </div>
+            </div>
+            <div class="modal-window__body">
+              Example!
+            </div>
+            <div class="modal-window__footer w-clearfix">
+              <div class="modal-window__footer-buttons w-clearfix">
+                <div class="modal-window__footer-button-holder">
+                  <div action-choose-deal-shown-in-deal-info="true" class="bem-button is-accent-color">Done</div>
+                </div>
+                <div class="modal-window__footer-button-holder">
+                  <div action-close-modal="true" class="bem-button is-secondary is-no-border">Zamknij</div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-window__close-icon-area">
+              <div action-close-modal="true" class="modal-window__close-icon">
+                <div><span class="font-icon is-modal-window__close-icon-cross"></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="flashing-notifications-wrapper">
+    <div js-selector="flashing-notification__neutral" class="flashing-notification is-transparent is-hidden">
+      <div class="flashing-notification__padding-wrapper">
+        <div class="flashing-notification__box">
+          <div class="flashing-notification__box-inner">
+            <div class="flashing-notification__icon-on-right-holder">
+              <div flashing-notifications__action-close-notification="true" class="flashing-notification__icon is-close-icon"></div>
+            </div>
+            <div class="flashing-notification__icon-holder">
+              <div class="flashing-notification__icon is-info-icon"></div>
+            </div>
+            <div js-selector="flashing-notification-text" class="flashing-notification__text">Powiadomienie!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div js-selector="flashing-notification__success" class="flashing-notification is-transparent is-hidden">
+      <div class="flashing-notification__padding-wrapper">
+        <div class="flashing-notification__box is-green-success">
+          <div class="flashing-notification__box-inner">
+            <div class="flashing-notification__icon-on-right-holder"></div>
+            <div class="flashing-notification__icon-holder">
+              <div class="flashing-notification__icon is-check"></div>
+            </div>
+            <div js-selector="flashing-notification-text" class="flashing-notification__text">Sukces!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div js-selector="flashing-notification__error" class="flashing-notification is-transparent is-hidden">
+      <div class="flashing-notification__padding-wrapper">
+        <div class="flashing-notification__box is-red-error">
+          <div class="flashing-notification__box-inner">
+            <div class="flashing-notification__icon-on-right-holder">
+              <div flashing-notifications__action-close-notification="true" class="flashing-notification__icon is-close-icon"></div>
+            </div>
+            <div class="flashing-notification__icon-holder">
+              <div class="flashing-notification__icon is-error"></div>
+            </div>
+            <div js-selector="flashing-notification-text" class="flashing-notification__text">Ups... Coś poszło nie tak.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="js/scripts-bundle.js" type="text/javascript"></script>
+</body>
+</html>
