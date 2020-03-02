@@ -1,10 +1,15 @@
 //modal generic action
 $.On('click', '[js-add-rhyme-button]', function() {
-    StateURL.setParam('modalContent', 'eol-modal');
+  StateURL.setParam('modalContent', 'eol-modal');
 });
 
 StateURL.onChange('modalContent', function(value) {
   $('[js-eol-modal]').isShownWhen(value === 'eol-modal');
+});
+
+$.On('click', '[js-start-button]', function() {
+  var firstId = $('[js-rhyme-list-item]').attr('id');
+  StateURL.setParam('rhyme', firstId);
 });
 
 // StateURL.onParamChange('subpage', function(value) {
