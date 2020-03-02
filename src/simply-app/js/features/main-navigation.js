@@ -24,8 +24,8 @@ StateURL.onChange('rym', function(value) {
 $.On('click', '[js-nav-next]', function() {
   var currentId = StateURL.get('rym');
   var adjacent = $('[id="'+currentId+'"]').next();
-  if (adjacent.length > 0) {
-    var newId = adjacent.attr('id');
+  var newId = adjacent.attr('id');
+  if (isNotEmpty(newId)) {
     StateURL.setParam('rym', newId);
   }
 });
@@ -33,8 +33,8 @@ $.On('click', '[js-nav-next]', function() {
 $.On('click', '[js-nav-prev]', function() {
   var currentId = StateURL.get('rym');
   var adjacent = $('[id="'+currentId+'"]').prev();
-  if (adjacent.length > 0) {
-    var newId = adjacent.attr('id');
+  var newId = adjacent.attr('id');
+  if (isNotEmpty(newId)) {
     StateURL.setParam('rym', newId);
   }
 
