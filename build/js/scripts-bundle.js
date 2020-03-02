@@ -38,7 +38,7 @@ $.On('click', '[js-start-button]', function() {
 
 StateURL.onChange('rym', function(value) {
   var rhymeToScrollTo = $('[id="'+value+'"]');
-  $(window).scrollTo(rhymeToScrollTo);
+  $(window).scrollTo(rhymeToScrollTo, 700);
 });
 
 // StateURL.onParamChange('subpage', function(value) {
