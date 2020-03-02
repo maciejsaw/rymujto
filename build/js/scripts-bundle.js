@@ -41,6 +41,19 @@ StateURL.onChange('rym', function(value) {
   $(window).scrollTo(rhymeToScrollTo, 700);
 });
 
+$.On('click', '[js-nav-next]', function() {
+  var currentId = StateURL.get('rym');
+  var newId = $('[id="'+value+'"]').next().attr('id');
+  StateURL.setParam('rym', newId);
+});
+
+$.On('click', '[js-nav-prev]', function() {
+  var currentId = StateURL.get('rym');
+  var newId = $('[id="'+value+'"]').prev().attr('id');
+  StateURL.setParam('rym', newId);
+});
+
+
 // StateURL.onParamChange('subpage', function(value) {
 // 	if (typeof value != 'undefined') {
 // 	    showOnlyElementsWithAttributeXMatchingY('js-subpage', value);
