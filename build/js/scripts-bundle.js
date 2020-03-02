@@ -79,6 +79,13 @@ function initDynamicUrlWithRhymesId() {
 }
 initDynamicUrlWithRhymesId();
 
+$(document).on('preloadingComplete', function() {
+  var rhymeId = StateURL.get('rym');
+  if (isNotEmpty(rhymeId)) {
+    scrollToRhyme(rhymeId);
+  }
+});
+
 
 // StateURL.onParamChange('subpage', function(value) {
 // 	if (typeof value != 'undefined') {
