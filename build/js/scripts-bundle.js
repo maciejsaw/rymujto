@@ -44,15 +44,20 @@ StateURL.onChange('rym', function(value) {
 $.On('click', '[js-nav-next]', function() {
   var currentId = StateURL.get('rym');
   var adjacent = $('[id="'+currentId+'"]').next();
-  var newId = adjacent.attr('id');
-  StateURL.setParam('rym', newId);
+  if (adjacent.length > 0) {
+    var newId = adjacent.attr('id');
+    StateURL.setParam('rym', newId);
+  }
 });
 
 $.On('click', '[js-nav-prev]', function() {
   var currentId = StateURL.get('rym');
   var adjacent = $('[id="'+currentId+'"]').prev();
-  var newId = adjacent.attr('id');
-  StateURL.setParam('rym', newId);
+  if (adjacent.length > 0) {
+    var newId = adjacent.attr('id');
+    StateURL.setParam('rym', newId);
+  }
+
 });
 
 
