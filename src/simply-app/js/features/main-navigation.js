@@ -13,8 +13,12 @@ $.On('click', '[js-start-button]', function() {
 });
 
 StateURL.onChange('rym', function(value) {
-  var rhymeToScrollTo = $('[id="'+value+'"]');
-  $(window).scrollTo(rhymeToScrollTo, 700);
+  if (isNotEmpty(value)) {
+    var rhymeToScrollTo = $('[id="'+value+'"]');
+    $(window).scrollTo(rhymeToScrollTo, 700);
+  } else {
+    StateURL.remove('rym');
+  }
 });
 
 $.On('click', '[js-nav-next]', function() {
