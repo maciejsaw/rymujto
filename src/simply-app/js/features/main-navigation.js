@@ -9,7 +9,12 @@ StateURL.onChange('modalContent', function(value) {
 
 $.On('click', '[js-start-button]', function() {
   var firstId = $('[js-rhyme-list-item]').attr('id');
-  StateURL.setParam('rhyme', firstId);
+  StateURL.setParam('rym', firstId);
+});
+
+StateURL.onChange('rym', function(value) {
+  var rhymeToScrollTo = $('[id="'+value+'"]');
+  $(window).scrollTo(rhymeToScrollTo);
 });
 
 // StateURL.onParamChange('subpage', function(value) {
