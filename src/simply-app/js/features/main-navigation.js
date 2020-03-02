@@ -36,13 +36,13 @@ $.On('click', '[js-nav-prev]', function() {
   }
 });
 
+var oneRhymeHeight;
 function initDynamicUrlWithRhymesId() {
-  var oneHeight = $('[js-rhyme-list-item]').first().innerHeight();
-  var len = $('[js-rhyme-list-item]').length;
+  oneRhymeHeight = $('[js-rhyme-list-item]').first().innerHeight();
 
   $(window).on('scroll', function() {
-    var scrollTop = $(this).scrollTop() - oneHeight/2;
-    var indexOfRhyme = scrollTop / oneHeight;
+    var scrollTop = $(this).scrollTop() - oneRhymeHeight/2;
+    var indexOfRhyme = scrollTop / oneRhymeHeight;
     console.log(indexOfRhyme);
     if (indexOfRhyme >= 0) {
       indexOfRhyme = Math.floor(indexOfRhyme);
@@ -54,6 +54,9 @@ function initDynamicUrlWithRhymesId() {
   });
 }
 initDynamicUrlWithRhymesId();
+$(window).on('resize', function() {
+  initDynamicUrlWithRhymesId();
+});
 
 $(document).on('preloadingComplete', function() {
   var rhymeId = StateURL.get('rym');
