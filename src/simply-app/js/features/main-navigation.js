@@ -39,6 +39,17 @@ $.On('click', '[js-nav-prev]', function() {
   }
 });
 
+var oneHeight = $('[js-rhyme-list-item]').first().innerHeight();
+var len = $('[js-rhyme-list-item]').length;
+
+$(window).on('scroll', function() {
+  var scrollTop = $(this).scrollTop();
+  var indexOfRhyme = scrollTop / oneHeight;
+  indexOfRhyme = Math.round(indexOfRhyme);
+  idOfRhyme = $('[js-rhyme-list-item]').eq(indexOfRhyme).attr('id');
+  StateURL.set('rym', idOfRhyme);
+});
+
 
 // StateURL.onParamChange('subpage', function(value) {
 // 	if (typeof value != 'undefined') {
