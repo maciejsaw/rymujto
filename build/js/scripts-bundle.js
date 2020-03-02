@@ -33,24 +33,21 @@ StateURL.onChange('modalContent', function(value) {
 
 $.On('click', '[js-start-button]', function() {
   var firstId = $('[js-rhyme-list-item]').attr('id');
-  StateURL.setParam('rym', firstId);
+  scrollToRhyme(firstId);
 });
 
-StateURL.onChange('rym', function(value) {
-  if (isNotEmpty(value)) {
-    var rhymeToScrollTo = $('[id="'+value+'"]');
-    $(window).scrollTo(rhymeToScrollTo, 700);
-  } else {
-    StateURL.remove('rym');
-  }
-});
+function scrollToRhyme(rhymeId) {
+  var rhymeToScrollTo = $('[id="'+rhymeId+'"]');
+  $(window).scrollTo(rhymeToScrollTo, 700);
+}
 
 $.On('click', '[js-nav-next]', function() {
   var currentId = StateURL.get('rym');
   var adjacent = $('[id="'+currentId+'"]').next();
   var newId = adjacent.attr('id');
+
   if (isNotEmpty(newId)) {
-    StateURL.setParam('rym', newId);
+    scrollToRhyme(newId);
   }
 });
 
@@ -59,20 +56,24 @@ $.On('click', '[js-nav-prev]', function() {
   var adjacent = $('[id="'+currentId+'"]').prev();
   var newId = adjacent.attr('id');
   if (isNotEmpty(newId)) {
-    StateURL.setParam('rym', newId);
+    scrollToRhyme(newId);
   }
 });
 
-var oneHeight = $('[js-rhyme-list-item]').first().innerHeight();
-var len = $('[js-rhyme-list-item]').length;
+function initDynamicUrlWithRhymesId() {
+  var oneHeight = $('[js-rhyme-list-item]').first().innerHeight();
+  var len = $('[js-rhyme-list-item]').length;
 
-$(window).on('scroll', function() {
-  var scrollTop = $(this).scrollTop();
-  var indexOfRhyme = scrollTop / oneHeight;
-  indexOfRhyme = Math.round(indexOfRhyme);
-  idOfRhyme = $('[js-rhyme-list-item]').eq(indexOfRhyme).attr('id');
-  StateURL.set('rym', idOfRhyme);
-});
+  $(window).on('scroll', function() {
+    var scrollTop = $(this).scrollTop();
+    console.log(scrollTop);
+    var indexOfRhyme = scrollTop / oneHeight;
+    indexOfRhyme = Math.round(indexOfRhyme);
+    idOfRhyme = $('[js-rhyme-list-item]').eq(indexOfRhyme).attr('id');
+    StateURL.set('rym', idOfRhyme);
+  });
+}
+initDynamicUrlWithRhymesId();
 
 
 // StateURL.onParamChange('subpage', function(value) {
