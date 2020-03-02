@@ -22,7 +22,14 @@ if ( window.location.pathname === "/") {
 
 // Utility functions specific to the app not to framework
 
+//modal generic action
+$.On('click', '[js-add-rhyme-button]', function() {
+    StateURL.setParam('modalContent', 'eol-modal');
+});
 
+StateURL.onChange('modalContent', function(value) {
+  $('[js-eol-modal]').isShownWhen(value === 'eol-modal');
+});
 
 // StateURL.onParamChange('subpage', function(value) {
 // 	if (typeof value != 'undefined') {
