@@ -19,13 +19,13 @@ StateURL.onChange('rym', function(value) {
 
 $.On('click', '[js-nav-next]', function() {
   var currentId = StateURL.get('rym');
-  var newId = $('[id="'+value+'"]').next().attr('id');
+  var newId = $('[id="'+currentId+'"]').next().attr('id');
   StateURL.setParam('rym', newId);
 });
 
 $.On('click', '[js-nav-prev]', function() {
   var currentId = StateURL.get('rym');
-  var newId = $('[id="'+value+'"]').prev().attr('id');
+  var newId = $('[id="'+currentId+'"]').prev().attr('id');
   StateURL.setParam('rym', newId);
 });
 
