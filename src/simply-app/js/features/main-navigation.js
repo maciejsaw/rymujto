@@ -49,7 +49,7 @@ function initDynamicUrlWithRhymesId() {
       idOfRhyme = $('[js-rhyme-list-item]').eq(indexOfRhyme).attr('id');
       StateURL.set('rym', idOfRhyme);
     } else {
-      StateURL.remove('rym', idOfRhyme);
+      StateURL.remove('rym');
     }
   });
 }
