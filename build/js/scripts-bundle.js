@@ -128,8 +128,6 @@ $(document).on('click', '[href="index.html"]', function(e) {
   }
 });
 
-
-
 //TODO!!!!!!!!!
 /*
 Sprzątnąć build
