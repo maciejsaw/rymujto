@@ -94,6 +94,15 @@ $(document).keydown(function(e) {
   }
 });
 
+$(document).on('click', '[href="index.html"]', function(e) {
+  if (isNotEmpty(State.get('rym'))) {
+    e.preventDefault();
+    $(window).scrollTo(0);
+  } else {
+    return true;
+  }
+});
+
 
 
 //TODO!!!!!!!!!
