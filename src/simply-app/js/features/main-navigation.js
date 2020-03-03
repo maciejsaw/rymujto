@@ -54,7 +54,7 @@ function initDynamicUrlWithRhymesId() {
       indexOfRhyme = Math.floor(indexOfRhyme);
       idOfRhyme = $('[js-rhyme-list-item]').eq(indexOfRhyme).attr('id');
       StateURL.set('rym', idOfRhyme, {doNotCreateHistoryState: true});
-      //State.set('rym', idOfRhyme);
+      State.set('rym', idOfRhyme);
     } else {
       StateURL.remove('rym');
     }
@@ -67,9 +67,12 @@ $(window).on('resize', function() {
 });
 
 $(document).on('renderingListReady', function() {
-  var rhymeId = StateURL.get('rym');
-  if (isNotEmpty(rhymeId)) {
-    scrollToRhyme(rhymeId);
+  var rhymeIdURL = StateURL.get('rym');
+  var rhymeIdLocalStorage = State.get('rym');
+  if (isNotEmpty(rhymeIdURL)) {
+    scrollToRhyme(rhymeIdURL);
+  } else if ( isNotEmpty(rhymeIdLocalStorage) ) {
+    scrollToRhyme(rhymeIdLocalStorage);
   }
 });
 
