@@ -94,6 +94,7 @@ $(document).keydown(function(e) {
   }
 });
 
+//first click on logo should scroll to top, then work as a normal link
 $(document).on('click', '[href="index.html"]', function(e) {
   if (isNotEmpty(State.get('rym'))) {
     e.preventDefault();
