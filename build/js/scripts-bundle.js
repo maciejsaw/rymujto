@@ -60,6 +60,7 @@ $.On('click', '[js-nav-prev]', function() {
   var currentId = StateURL.get('rym');
   var adjacent = $('[id="'+currentId+'"]').prev();
   var newId = adjacent.attr('id');
+  console.log(newId);
   if (isNotEmpty(newId)) {
     scrollToRhyme(newId);
   } else {
