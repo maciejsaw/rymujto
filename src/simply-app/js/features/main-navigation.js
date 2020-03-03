@@ -50,7 +50,6 @@ function initDynamicUrlWithRhymesId() {
   $(window).on('scroll.dynamicURL', function() {
     var scrollTop = $(this).scrollTop() - oneRhymeHeight/2;
     var indexOfRhyme = scrollTop / oneRhymeHeight;
-    console.log(indexOfRhyme);
     if (indexOfRhyme >= 0) {
       indexOfRhyme = Math.floor(indexOfRhyme);
       idOfRhyme = $('[js-rhyme-list-item]').eq(indexOfRhyme).attr('id');
