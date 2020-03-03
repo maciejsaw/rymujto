@@ -14,7 +14,7 @@ $.On('click', '[js-start-button]', function() {
 
 function scrollToRhyme(rhymeId) {
   var rhymeToScrollTo = $('[id="'+rhymeId+'"]');
-  $(window).scrollTo(rhymeToScrollTo, 700);
+  $(window).scrollTo(rhymeToScrollTo, 500);
 }
 
 function nextRhyme() {
