@@ -5516,11 +5516,7 @@ $(document).on('preloadingComplete', function() {
 
 //TODO!!!!!!!!!
 /*
-Top 200 zamiast 500
 Sprzątnąć build
-Przepisać Kilkanaście na Webflow
-Renderować dynamicznie resztę dopiero jak ktoś dojedzie
-Poprawić FB share button na customowy z linkiem do sharer?
 Zrobić update aplikacji APK
 */
 
