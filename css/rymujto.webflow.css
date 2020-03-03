@@ -84,6 +84,7 @@ a {
   background-color: transparent;
   color: #222;
   text-align: center;
+  cursor: pointer;
 }
 
 .button:hover {
@@ -144,7 +145,7 @@ a {
 
 .section-for-rated-element {
   display: block;
-  padding-bottom: 149px;
+  padding-bottom: 67px;
   text-align: center;
 }
 
@@ -254,6 +255,7 @@ a {
   background-color: #fff;
   font-size: 40px;
   text-align: center;
+  cursor: pointer;
 }
 
 .nav-arrows:active {
@@ -279,6 +281,7 @@ a {
   position: relative;
   display: inline-block;
   margin-top: 14px;
+  padding-right: 6px;
   font-size: 18px;
   line-height: 24px;
   text-align: right;
@@ -931,6 +934,15 @@ a {
   background-color: #ececec;
 }
 
+.lm-social-share-btn-holder.is-hidden {
+  display: none;
+}
+
+.fb-share-embed {
+  -webkit-filter: contrast(1100%) grayscale(100%);
+  filter: contrast(1100%) grayscale(100%);
+}
+
 @media screen and (max-width: 767px) {
   .box-to-center-vertically {
     padding-right: 116px;
@@ -955,7 +967,7 @@ a {
     max-width: 150px;
   }
   .section-for-rated-element {
-    padding-bottom: 151px;
+    padding-bottom: 45px;
   }
   .box-to-center-vertically {
     padding-right: 10px;
@@ -964,6 +976,7 @@ a {
   .author-name {
     left: 0px;
     right: 0px;
+    padding-right: 3px;
     font-size: 16px;
     text-align: center;
   }
@@ -989,7 +1002,7 @@ a {
     line-height: 18px;
   }
   .rated-text__votes {
-    padding-left: 3px;
+    padding-left: 2px;
     font-size: 16px;
   }
   .rated-text__divider {
