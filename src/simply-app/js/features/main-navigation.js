@@ -19,7 +19,12 @@ function scrollToRhyme(rhymeId) {
 
 $.On('click', '[js-nav-next]', function() {
   var currentId = StateURL.get('rym');
-  var adjacent = $('[id="'+currentId+'"]').next();
+  var adjacent;
+  if (isNotEmpty(currentId)) {
+    adjacent = $('[id="'+currentId+'"]').next();
+  } else {
+    adjacent = $('[js-rhyme-list-item]').first();
+  }
   var newId = adjacent.attr('id');
 
   if (isNotEmpty(newId)) {
