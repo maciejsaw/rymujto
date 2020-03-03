@@ -5433,7 +5433,6 @@ function renderRhymesList() {
     
     node.appendTo(template.parent());
   });
-
 }
 
 $(document).on('preloadingComplete', function() {
