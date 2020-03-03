@@ -69,10 +69,10 @@ var appScripts = [
   "./src/simply-app/js/general/global-variables.js",
   "./src/simply-app/js/general/routes-and-redirects.js",
   "./src/simply-app/js/general/utility-functions.js",
-  "./src/simply-app/js/features/render-list.js",
   "./src/simply-app/js/features/main-navigation.js",
   "./src/simply-app/js/features/analytics-tracking.js",
   "./src/simply-app/js/features/demo-page.js",
+  "./src/simply-app/js/features/render-list.js",
 ];
 
 var allScripts = thirdPartyScripts

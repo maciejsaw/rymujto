@@ -38,17 +38,6 @@ function renderRhymesList() {
       "_id": "kR6ozEF6aNiTBejBD"
     },
     {
-      "textContent": "Zasada jest prosta i wszystkim znana\nIm lepszy film, tym dłuższa reklama",
-      "author": "MKS Tarnovia",
-      "dateAdded": {
-        "$date": 1479758741906
-      },
-      "ratedGoodCounter": 2070,
-      "ratedBadCounter": 85,
-      "ratingIndex": 0.9601111121378344,
-      "_id": "e7rwiXLH252MBFMob"
-    },
-    {
       "textContent": "Hokus Pokus Sranie w Banie\nKoniec Memów o Pazdanie",
       "author": "Suarez1284",
       "dateAdded": {
