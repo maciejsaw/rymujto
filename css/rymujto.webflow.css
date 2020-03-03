@@ -943,6 +943,25 @@ a {
   filter: contrast(1100%) grayscale(100%);
 }
 
+.words-cloud__img {
+  max-width: 900px;
+}
+
+.popular-chart__img {
+  max-width: 900px;
+}
+
+@media screen and (max-width: 991px) {
+  .words-cloud__img {
+    margin-right: -76px;
+    margin-left: -76px;
+  }
+  .popular-chart__img {
+    margin-right: -76px;
+    margin-left: -76px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .box-to-center-vertically {
     padding-right: 116px;
@@ -1009,6 +1028,14 @@ a {
     padding-right: 4px;
     padding-left: 4px;
     font-size: 16px;
+  }
+  .words-cloud__img {
+    margin-right: -38px;
+    margin-left: -38px;
+  }
+  .popular-chart__img {
+    margin-right: -21px;
+    margin-left: -21px;
   }
 }
 
