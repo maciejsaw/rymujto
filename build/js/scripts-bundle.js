@@ -81,6 +81,7 @@ function initDynamicUrlWithRhymesId() {
       State.set('rym', idOfRhyme);
     } else {
       StateURL.remove('rym');
+      State.remove('rym');
     }
   });
 }
