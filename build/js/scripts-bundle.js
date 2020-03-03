@@ -62,6 +62,8 @@ $.On('click', '[js-nav-prev]', function() {
   var newId = adjacent.attr('id');
   if (isNotEmpty(newId)) {
     scrollToRhyme(newId);
+  } else {
+    $(window).scrollTo(0, 900);
   }
 });
 
