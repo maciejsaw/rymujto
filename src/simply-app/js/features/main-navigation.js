@@ -53,7 +53,7 @@ function initDynamicUrlWithRhymesId() {
     if (indexOfRhyme >= 0) {
       indexOfRhyme = Math.floor(indexOfRhyme);
       idOfRhyme = $('[js-rhyme-list-item]').eq(indexOfRhyme).attr('id');
-      StateURL.set('rym', idOfRhyme);
+      StateURL.set('rym', idOfRhyme, {doNotCreateHistoryState: true});
     } else {
       StateURL.remove('rym');
     }
