@@ -5400,7 +5400,6 @@ function renderRhymesList() {
     var node = template.clone();
     
     var text = value.textContent.replace(/\n/g, "<br />");
-    console.log(text);
     node.find('[js-rhyme-text]').html(text);
 
     node.find('[js-rhyme-author]').text(value.author);
