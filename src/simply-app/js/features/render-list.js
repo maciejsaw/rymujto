@@ -5392,7 +5392,7 @@ function renderRhymesList() {
       "ratingIndex": 0.8385420042401589,
       "_id": "So4mnks8xSwAQZrxe"
     }
-  ]
+  ];
 
   var template = $('[js-rhyme-list-item]').first();
 
