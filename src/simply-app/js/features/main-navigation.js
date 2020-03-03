@@ -65,7 +65,7 @@ $(window).on('resize', function() {
   initDynamicUrlWithRhymesId();
 });
 
-$(document).on('preloadingComplete', function() {
+$(document).on('renderingListReady', function() {
   var rhymeId = StateURL.get('rym');
   if (isNotEmpty(rhymeId)) {
     scrollToRhyme(rhymeId);
