@@ -17,7 +17,7 @@ function scrollToRhyme(rhymeId) {
   $(window).scrollTo(rhymeToScrollTo, 700);
 }
 
-$.On('click', '[js-nav-next]', function() {
+function nextRhyme() {
   var currentId = StateURL.get('rym');
   var adjacent;
   if (isNotEmpty(currentId)) {
@@ -30,9 +30,9 @@ $.On('click', '[js-nav-next]', function() {
   if (isNotEmpty(newId)) {
     scrollToRhyme(newId);
   }
-});
+}
 
-$.On('click', '[js-nav-prev]', function() {
+function previousRhyme() {
   var currentId = StateURL.get('rym');
   var adjacent = $('[id="'+currentId+'"]').prev();
   var newId = adjacent.attr('id');
@@ -41,7 +41,7 @@ $.On('click', '[js-nav-prev]', function() {
   } else {
     $(window).scrollTo(0, 900);
   }
-});
+}
 
 var oneRhymeHeight;
 function initDynamicUrlWithRhymesId() {
@@ -70,6 +70,23 @@ $(document).on('renderingListReady', function() {
   if (isNotEmpty(rhymeId)) {
     scrollToRhyme(rhymeId);
   }
+});
+
+$.On('click', '[js-nav-next]', function() {
+  nextRhyme();
+});
+
+$.On('click', '[js-nav-prev]', function() {
+  previousRhyme();
+});
+
+$(document).keydown(function(e) {
+    console.log(e.key);
+    if (e.key === "ArrowRight") {
+      nextRhyme();
+    } else if (e.key === "ArrowLeft") {
+      previousRhyme();
+    }
 });
 
 //TODO!!!!!!!!!
