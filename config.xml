@@ -3,7 +3,7 @@
     xmlns:gap   = "http://phonegap.com/ns/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android" 
     id          = "com.maciejsawicki.rymujto"
-    versionCode = "102020"
+    versionCode = "102030"
     version     = "1.3.1" >
 
 <!-- versionCode is optional and Android only -->
@@ -33,6 +33,10 @@
   <platform name="android">
     <splash src="res/screen/android/drawable-land-xxxhdpi-screen.png"   density="land-xxxhdpi" />
     <splash src="res/screen/android/drawable-port-xxxhdpi-screen.png"   density="port-xxxhdpi" />
+    <splash src="res/screen/android/splash-480x800.png"   density="port-hdpi" />
+    <splash src="res/screen/android/splash-800x480.png"   density="land-hdpi" />
+    <splash src="res/screen/android/splash-720x1280.png"   density="port-xhdpi" />
+    <splash src="res/screen/android/splash-1280x720.png"   density="land-xhdpi" />
   </platform>
 
   <access origin="*"/>
