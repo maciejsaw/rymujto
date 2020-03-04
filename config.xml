@@ -30,6 +30,11 @@
   <preference name="AllowInlineMediaPlayback" value="true" />
   <preference name="KeepRunning" value="false"/>
 
+  <platform name="android">
+    <splash src="res/screen/android/drawable-land-xxxhdpi-screen.png"   density="land-xxxhdpi" />
+    <splash src="res/screen/android/drawable-port-xxxhdpi-screen.png"   density="port-xxxhdpi" />
+  </platform>
+
   <access origin="*"/>
   <!-- Added the following intents to support the removal of whitelist code from base cordova to a plugin -->
   <!-- Whitelist configuration. Refer to https://cordova.apache.org/docs/en/edge/guide_appdev_whitelist_index.md.html -->
