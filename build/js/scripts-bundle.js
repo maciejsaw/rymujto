@@ -101,7 +101,7 @@ $(document).on('renderingListReady', function() {
   }
 });
 
-$.On('click', '[js-nav-next]', function() {
+On.touchendOrClick('click', '[js-nav-next]', function() {
   nextRhyme();
 });
 
