@@ -86,7 +86,6 @@ $.On('click', '[js-nav-prev]', function() {
 });
 
 $(document).keydown(function(e) {
-  console.log(e.key);
   if (e.key === "ArrowRight") {
     nextRhyme();
   } else if (e.key === "ArrowLeft") {
