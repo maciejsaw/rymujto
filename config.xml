@@ -30,6 +30,11 @@
   <preference name="AllowInlineMediaPlayback" value="true" />
   <preference name="KeepRunning" value="false"/>
 
+  <splash src="splash.png" />
+  <splash src="res/screen/android/splash-1280x720.png" platform="android" qualifier="xhdpi" />
+  <splash src="res/screen/android/drawable-port-xxxhdpi-screen.png" platform="android" qualifier="port-xxxhdpi" />
+  <splash src="res/screen/android/drawable-land-xxxhdpi-screen.png" platform="android" qualifier="land-xxxhdpi" />
+
   <platform name="android">
     <splash src="res/screen/android/drawable-land-xxxhdpi-screen.png"   density="land-xxxhdpi" />
     <splash src="res/screen/android/drawable-port-xxxhdpi-screen.png"   density="port-xxxhdpi" />
