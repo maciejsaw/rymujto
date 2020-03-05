@@ -30,25 +30,26 @@
   <preference name="AllowInlineMediaPlayback" value="true" />
   <preference name="KeepRunning" value="false"/>
 
-  <splash src="splash.png" />
+<!--   <splash src="splash.png" />
   <splash src="res/screen/android/splash-1280x720.png" platform="android" qualifier="xhdpi" />
   <splash src="res/screen/android/drawable-port-xxxhdpi-screen.png" platform="android" qualifier="port-xxxhdpi" />
-  <splash src="res/screen/android/drawable-land-xxxhdpi-screen.png" platform="android" qualifier="land-xxxhdpi" />
+  <splash src="res/screen/android/drawable-land-xxxhdpi-screen.png" platform="android" qualifier="land-xxxhdpi" /> -->
 
-  <platform name="android">
+<!-- <plugin name="cordova-plugin-splashscreen" /> -->
+<!--   <platform name="android">
     <splash src="res/screen/android/drawable-land-xxxhdpi-screen.png"   density="land-xxxhdpi" />
     <splash src="res/screen/android/drawable-port-xxxhdpi-screen.png"   density="port-xxxhdpi" />
     <splash src="res/screen/android/splash-480x800.png"   density="port-hdpi" />
     <splash src="res/screen/android/splash-800x480.png"   density="land-hdpi" />
     <splash src="res/screen/android/splash-720x1280.png"   density="port-xhdpi" />
     <splash src="res/screen/android/splash-1280x720.png"   density="land-xhdpi" />
-  </platform>
+  </platform> -->
 
   <access origin="*"/>
   <!-- Added the following intents to support the removal of whitelist code from base cordova to a plugin -->
   <!-- Whitelist configuration. Refer to https://cordova.apache.org/docs/en/edge/guide_appdev_whitelist_index.md.html -->
   <plugin name="cordova-plugin-whitelist" version="1" />
-  <plugin name="cordova-plugin-splashscreen" />
+  
   <allow-intent href="http://*/*" />
   <allow-intent href="https://*/*" />
   <allow-intent href="tel:*" />
