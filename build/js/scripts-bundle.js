@@ -23,7 +23,7 @@
 // Utility functions specific to the app not to framework
 
 //modal generic action
-$.On('click', '[js-add-rhyme-button]', function() {
+On.touchendOrClick('[js-add-rhyme-button]', function() {
   StateURL.setParam('modalContent', 'eol-modal');
 });
 
@@ -31,7 +31,7 @@ StateURL.onChange('modalContent', function(value) {
   $('[js-eol-modal]').isShownWhen(value === 'eol-modal');
 });
 
-$.On('click', '[js-start-button]', function() {
+On.touchendOrClick('[js-start-button]', function() {
   var firstId = $('[js-rhyme-list-item]').attr('id');
   scrollToRhyme(firstId);
 });
