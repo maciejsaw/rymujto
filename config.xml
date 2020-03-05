@@ -29,6 +29,7 @@
   <preference name="show-splash-screen-spinner" value="false" />
   <preference name="AllowInlineMediaPlayback" value="true" />
   <preference name="KeepRunning" value="false"/>
+  <preference name="android-targetSdkVersion" value="28" />
 
 <!--   <splash src="splash.png" />
   <splash src="res/screen/android/splash-1280x720.png" platform="android" qualifier="xhdpi" />
