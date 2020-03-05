@@ -77,7 +77,7 @@ $(document).on('renderingListReady', function() {
   }
 });
 
-$.On.touchendOrClick('click', '[js-nav-next]', function() {
+$.On.touchendOrClick('[js-nav-next]', function() {
   nextRhyme();
 });
 
